@@ -1,0 +1,656 @@
+/* ==========================================================================
+   CONFIGURACIÓN GENERAL
+   ========================================================================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+    background: #f5f5f5;
+    color: #333333;
+}
+
+/* Contenedor global para limitar el ancho del contenido */
+.contenedor {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ==========================================================================
+   ENCABEZADO, LOGO Y NAVBAR
+   ========================================================================== */
+header {
+    background: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 3px solid #4caf50; /* Línea verde superior de la app */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #ffffff;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajustado para el logo */
+.logo img {
+    width: 150%;
+    max-width: 500px; 
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.titulo {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* ==========================================================================
+   MENÚ DE NAVEGACIÓN
+   ========================================================================== */
+nav {
+    background: #11131d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 15px;
+}
+
+nav ul li {
+    margin: 5px 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4eedc;
+}
+
+/* ==========================================================================
+   PRESENTACIÓN Y SLIDER (FICHA DETALLADA CENTOLLO)
+   ========================================================================== */
+.presentacion {
+    display: flex;
+    background: #fffdf9; /* Tono crema suave de la ficha técnica */
+    border: 1px solid #dddddd;
+    margin-top: 25px;
+    align-items: center; 
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.slider-contenedor {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.slider {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.4s ease-in-out; 
+}
+
+/* Puntos de paginación inferiores */
+.paginacion {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.punto {
+    width: 8px;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+.punto.activo {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.texto {
+    width: 50%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.texto h2 {
+    margin-top: 0;
+    font-size: 32px;
+    color: #4a3b32;
+    border-bottom: 1px solid #e2ded5;
+    padding-bottom: 10px;
+}
+
+.descripcion-principal {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #555555;
+}
+
+.nombres-idiomas {
+    margin: 15px 0;
+    font-size: 13.5px;
+    color: #555555;
+    line-height: 1.4;
+}
+
+.specs {
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    border-top: 1px solid #e2ded5;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+.specs p {
+    margin: 0;
+}
+
+.light-text {
+    color: #777777;
+    margin-left: 4px;
+}
+
+/* ==========================================================================
+   NUEVOS ESTILOS: TARJETAS DE PLATOS DETALLADAS (FUSIONADOS)
+   ========================================================================== */
+.titulo-seccion {
+    font-size: 26px;
+    margin: 40px 0 20px 0;
+    color: #222222;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Tarjeta contenedora con bordes muy redondeados tipo app */
+.plato-card {
+    display: flex;
+    background: #ffffff;
+    margin: 20px auto;
+    max-width: 800px; /* Centra y acopla las tarjetas al formato lista */
+    border-radius: 14px; 
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+
+.plato-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.info-card {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.encabezado-plato {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.info-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #000000;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.icono-guardar {
+    font-size: 18px;
+    color: #a0aec0;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.autor {
+    margin: 5px 0 8px 0;
+    font-size: 12.5px;
+    color: #718096;
+}
+
+.ingredientes {
+    color: #616161;
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.detalles-receta {
+    display: flex;
+    gap: 15px;
+    margin-top: auto; /* Empuja los medidores de tiempo y raciones al fondo */
+    padding-top: 10px;
+    font-size: 12px;
+    color: #4a5568;
+}
+
+/* ==========================================================================
+   CONTACTO Y MAPAS
+   ========================================================================== */
+.contacto {
+    background: #f4eedc;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+.datos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.datos h3 {
+    margin-top: 0;
+    color: #4a3b32;
+}
+
+.datos p {
+    margin: 5px 0;
+    color: #555555;
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 6px;
+    display: block;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+/* ==========================================================================
+   DISEÑO RESPONSIVO ORIGINAL (Móviles y Tablets)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .contenedor {
+        width: 92%;
+    }
+    
+    .presentacion, .plato-card {
+        flex-direction: column;
+    }
+    
+    .slider-contenedor, .texto, .plato-card img {
+        width: 100%;
+    }
+    
+    .slider {
+        height: 220px;
+    }
+
+    .plato-card img {
+        height: 180px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    nav ul li {
+        margin: 8px 0;
+    }
+}
+
+/* ==========================================================================
+   NUEVOS ESTILOS AGREGADOS: PIE DE PÁGINA (FOOTER COMPLETO)
+   ========================================================================== */
+.pie-pagina {
+    background-color: #ffffff;
+    margin-top: 60px;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Franja superior oscura del footer con iconos verdes */
+.banner-caracteristicas {
+    background-color: #212121; /* Color oscuro idéntico a las capturas */
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 30px 20px;
+    gap: 15px;
+}
+
+.item-caracteristica {
+    flex: 1;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Ajuste de iconos y filtro para convertirlos en el verde de la captura */
+/* Ajuste de iconos manteniendo sus colores originales */
+.item-caracteristica img {
+    height: 65px;        /* Ajustamos un poco el tamaño para que luzca mejor */
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 12px;
+    display: inline-block;
+    /* SE ELIMINÓ EL FILTRO VERDE PARA MOSTRAR LA IMAGEN REAL */
+}
+
+/* Opcional: Asegurar que el título que acompaña a la imagen se vea en mayúsculas y negrita */
+.item-caracteristica h4 {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+
+.item-caracteristica p {
+    font-size: 11.5px;
+    line-height: 1.4;
+    color: #aaaaaa;
+    margin: 0;
+}
+
+/* Sección inferior con dirección y redes */
+.pie-contenido {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Tarjeta clara con la información de contacto */
+.pie-info-contacto {
+    background-color: #f4fbf4; /* Fondo sutilmente verdoso */
+    border: 1px solid #e1efe1;
+    padding: 15px 25px;
+    border-radius: 6px;
+}
+
+.pie-info-contacto p {
+    margin: 6px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2e7d32; /* Texto en verde corporativo */
+    text-align: left;
+}
+
+/* Botones para los iconos de Redes Sociales */
+.pie-redes {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-red {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px; /* Estructura cuadrada suavizada */
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.2s;
+}
+
+.btn-red:hover {
+    transform: scale(1.08);
+}
+
+/* Estilos de color institucionales de los botones */
+.social-facebook { background-color: #1877f2; }
+.social-twitter  { background-color: #1da1f2; }
+.social-whatsapp { background-color: #25d366; }
+.social-telegram { background-color: #0088cc; }
+.social-mas      { background-color: #0066ff; }
+
+/* Adaptación del footer en pantallas pequeñas */
+@media (max-width: 768px) {
+    .pie-contenido, .banner-caracteristicas {
+        flex-direction: column;
+        align-items: center;
+    }
+    .item-caracteristica {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .pie-info-contacto {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Estilos generales de la sección */
+#integrantes {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título de la página con súper negrita */
+#integrantes h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+/* Tarjetas de los integrantes con fondo crema suave */
+.integrante {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fcf8f2; /* Color crema de fondo */
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    border: 1px solid #e0dacb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* Contenedor de la información */
+.info-integrante {
+    width: 70%;
+}
+
+.info-integrante h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.info-integrante p {
+    font-size: 15px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Etiquetas e información sincronizadas con tu estilo */
+.info-integrante .etiqueta {
+    font-weight: 700;
+    color: #2c2c2c;
+}
+
+.info-integrante .valor {
+    color: #777777; /* Gris claro opaco */
+    font-weight: 400;
+}
+
+/* CONTROL DE CONTENEDOR Y REDONDEO PERFECTO */
+.integrante {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fcf8f2; /* Color crema suave */
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    border: 1px solid #e0dacb;
+}
+
+.info-integrante {
+    width: 65%;
+}
+
+.foto-integrante {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Forzar tamaño idéntico en alto y ancho para que al aplicar 50% sea un círculo */
+.foto-integrante img {
+    width: 160px !important;   
+    height: 160px !important;  
+    object-fit: cover !important; /* Evita que la foto se estire feo */
+    border-radius: 50% !important; /* Hace la imagen redonda */
+    border: 4px solid #1a1a1a;    /* Borde oscuro elegante */
+    display: block;
+}
+
+/* Configuración matemática para un círculo impecable */
+.foto-integrante img {
+    width: 150px;         /* Tamaño de la imagen controlado */
+    height: 150px;        /* Alto igual al ancho obligatorio */
+    object-fit: cover;    /* Recorta la imagen al centro para que no se deforme */
+    border-radius: 50%;   /* Convierte la caja en un círculo */
+    border: 4px solid #1a1a1a; /* Borde oscuro elegante */
+    background-color: #e0dacb; /* Fondo por si la foto tarda en cargar */
+}
+
+/* Diseño Responsivo para Celulares */
+@media (max-width: 768px) {
+    .integrante {
+        flex-direction: column-reverse; /* Envía la foto arriba en celulares */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .info-integrante,
+    .foto-integrante {
+        width: 100%;
+    }
+
+    .foto-integrante {
+        margin-bottom: 20px; /* Separación con el texto de abajo */
+    }
+}
+
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.7);
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-contenido{
+    background:linear-gradient(135deg,#ffffff,#fff4e8);
+    width:450px;
+    max-width:90%;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+}
+
+.modal-contenido h2{
+    color:#ff6b00;
+    font-size:40px;
+}
+
+.modal-contenido img{
+    width:250px;
+    border-radius:15px;
+    margin:15px 0;
+}
+
+.modal-contenido p{
+    font-size:22px;
+    line-height:1.5;
+}
+
+.modal-contenido button{
+    background:#ff6b00;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.cerrar{
+    float:right;
+    font-size:35px;
+    cursor:pointer;
+    font-weight:bold;
+}
